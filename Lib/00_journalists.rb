@@ -12,7 +12,7 @@ journalist = journalist.sort_by {|word| word.length}
 puts "Le handle le plus court est #{journalist[0]}"
 
 # --------------------------
-#handle de 6 charac (5+@)
+#handle de 6 carac (5+@)
 journalist_6 = []
 
 journalist.each do|word|
@@ -20,7 +20,7 @@ journalist.each do|word|
 	journalist_6 << word
 	end 
 end 	
-puts "Il y a #{journalist_6.length} handles de 5 charac"
+puts "Il y a #{journalist_6.length} handles de 5 carac"
 
 # --------------------------
 #nombre de handle avec majuscule
@@ -36,7 +36,7 @@ puts
 #trier par ordre alphabétique
 journalist = journalist.sort 
 puts "Par ordre alphabétique"
-puts journalist
+print journalist
 puts 
 puts 
 
@@ -44,7 +44,7 @@ puts
 #trier par taille 
 journalist = journalist.sort_by {|word| word.length}
 puts "Par taille"
-puts journalist 
+print journalist 
 puts 
 puts 
 # --------------------------
@@ -53,10 +53,17 @@ puts "La position de @epenser dans l'array est #{journalist.index ("@epenser")} 
 
 # --------------------------
 #Répartition par taille
-journalist.each do |taille, word.length|
-	puts taille
+taille = []
+
+journalist.each do |word|
+  taille << word.length
 end 
 
+compteur = Hash.new {0}
+taille.each do |nb_apparition|
+  compteur[nb_apparition] += 1
+end
+puts compteur
 
 
 
